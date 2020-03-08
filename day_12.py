@@ -43,13 +43,17 @@ class Student(Person):
             return "T"
 
 
-if __name__ == "__main__":
+def main():
     line = input().split()
-    firstName = line[0]
-    lastName = line[1]
-    idNum = line[2]
-    numScores = int(input())  # not needed for Python
+    first_name = line[0]
+    last_name = line[1]
+    id_number = line[2]
+    num_scores = int(input())  # not needed for Python
     scores = list(map(int, input().split()))
-    s = Student(firstName, lastName, idNum, scores)
+    s = Student(first_name, last_name, id_number, scores)
     s.printPerson()
     print("Grade:", s.calculate())
+
+
+if __name__ == "__main__":
+    main()
